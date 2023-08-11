@@ -1,0 +1,10 @@
+.normal-block {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  width: 100px;
+  height: 100px;
+  background-color: aqua;
+
+  box-shadow: 1px 1px 5px gray, -1px -1px 5px gray;
+}
