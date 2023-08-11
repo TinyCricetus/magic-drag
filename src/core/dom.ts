@@ -2,7 +2,7 @@ export interface ElementProps {
   id: string
   className: string
   style: Record<string, string | number>
-  
+
   [key: `on${string}`]: (event: Event) => void
 }
 
@@ -26,9 +26,10 @@ export function createElement(tagName: string, props: Partial<ElementProps>) {
     const event = eventName.substring(2)
     const callback = props[`on${event}`]
     if (callback) {
-      element.addEventListener(event, ev => {
-        callback(ev)
-      })
+      element.addEventListener(
+        event.toLowerCase(),
+        ev => callback(ev)
+      )
     }
   })
 

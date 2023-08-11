@@ -33,7 +33,7 @@ const config: Webpack.Configuration = {
   plugins: [
     new HtmlPlugin({
       template: path.resolve(__dirname, './public/index.html'),
-      favicon: path.resolve(__dirname, './public/favicon.png')
+      favicon: path.resolve(__dirname, './images/paimon.png')
     })
   ]
 }
